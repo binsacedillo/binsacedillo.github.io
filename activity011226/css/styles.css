@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+.logo {
+    width: 60px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.container {
+    display: flex;
+    min-height: 80vh;
+}
+.sidebar {
+    width: 200px;
+    background: #34495e;
+    color: #fff;
+    padding: 20px 0;
+    min-height: 100%;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin: 20px 0;
+}
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+main {
+    flex: 1;
+    padding: 40px;
+    background: #fff;
+}
+.products {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+.product {
+    background: #ecf0f1;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.product img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 10px;
+}
+.contact-form label {
+    font-weight: bold;
+}
+.contact-form input, .contact-form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.contact-form button {
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.contact-form button:hover {
+    background: #34495e;
+}
