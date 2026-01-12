@@ -23,29 +23,56 @@ header {
     min-height: 80vh;
 }
 .sidebar {
-    width: 200px;
+    width: 210px;
     background: #263238; /* Jet Gray */
     color: #fff;
-    padding: 20px 0;
+    padding: 28px 0 28px 0;
     min-height: 100%;
     box-shadow: 2px 0 8px rgba(38,50,56,0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .sidebar ul {
     list-style: none;
     padding: 0;
 }
+.sidebar ul {
+    width: 100%;
+    padding-left: 0;
+}
 .sidebar ul li {
-    margin: 20px 0;
+    margin: 12px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .sidebar ul li a {
     color: #FFD600; /* Accent Yellow */
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.2s;
+    width: 90%;
+    display: block;
+    padding: 10px 0;
+    border-radius: 6px;
+    text-align: center;
+    background: transparent;
+    transition: background 0.3s cubic-bezier(.4,0,.2,1), color 0.2s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1);
+    outline: none;
 }
-.sidebar ul li a:hover {
-    color: #2196F3; /* Sky Blue */
-    text-decoration: underline;
+.sidebar ul li a.active-nav {
+    background: #2196F3;
+    color: #fff !important;
+    box-shadow: 0 2px 8px rgba(33,150,243,0.12);
+    font-weight: bold;
+}
+.sidebar ul li a:focus {
+    box-shadow: 0 0 0 2px #FFD600;
+}
+.sidebar ul li a:hover:not(.active-nav) {
+    background: #FFD600;
+    color: #263238;
+    text-decoration: none;
 }
 main {
     flex: 1;
@@ -54,9 +81,11 @@ main {
     border-left: 2px solid #B0BEC5; /* Contrail Silver */
 }
 .products {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
     margin-top: 20px;
+    width: 100%;
 }
 .product {
     background: #F5F7FA; /* Cloud White */
