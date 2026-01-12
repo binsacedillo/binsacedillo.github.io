@@ -2,14 +2,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: #F5F7FA; /* Cloud White */
+    color: #263238; /* Jet Gray */
 }
 header {
-    background: #2c3e50;
+    background: #2196F3; /* Sky Blue */
     color: #fff;
     padding: 20px 0;
     text-align: center;
     position: relative;
+    border-bottom: 5px solid #FFD600; /* Accent Yellow */
 }
 .logo {
     width: 60px;
@@ -22,10 +24,11 @@ header {
 }
 .sidebar {
     width: 200px;
-    background: #34495e;
+    background: #263238; /* Jet Gray */
     color: #fff;
     padding: 20px 0;
     min-height: 100%;
+    box-shadow: 2px 0 8px rgba(38,50,56,0.04);
 }
 .sidebar ul {
     list-style: none;
@@ -35,17 +38,20 @@ header {
     margin: 20px 0;
 }
 .sidebar ul li a {
-    color: #fff;
+    color: #FFD600; /* Accent Yellow */
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.2s;
 }
 .sidebar ul li a:hover {
+    color: #2196F3; /* Sky Blue */
     text-decoration: underline;
 }
 main {
     flex: 1;
     padding: 40px;
     background: #fff;
+    border-left: 2px solid #B0BEC5; /* Contrail Silver */
 }
 .products {
     display: flex;
@@ -53,12 +59,13 @@ main {
     margin-top: 20px;
 }
 .product {
-    background: #ecf0f1;
+    background: #F5F7FA; /* Cloud White */
     border-radius: 8px;
     padding: 20px;
     width: 200px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(33,150,243,0.08);
+    border: 1px solid #B0BEC5; /* Contrail Silver */
 }
 .product img {
     width: 100%;
@@ -67,10 +74,11 @@ main {
     border-radius: 4px;
 }
 footer {
-    background: #2c3e50;
+    background: #263238; /* Jet Gray */
     color: #fff;
     text-align: center;
     padding: 15px 0;
+    border-top: 5px solid #2196F3; /* Sky Blue */
 }
 .contact-form {
     display: flex;
@@ -83,18 +91,22 @@ footer {
 }
 .contact-form input, .contact-form textarea {
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #B0BEC5; /* Contrail Silver */
     border-radius: 4px;
+    background: #fff;
+    color: #263238;
 }
 .contact-form button {
-    background: #2c3e50;
+    background: #2196F3; /* Sky Blue */
     color: #fff;
     border: none;
     padding: 10px;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
+    transition: background 0.2s, color 0.2s;
 }
 .contact-form button:hover {
-    background: #34495e;
+    background: #FFD600; /* Accent Yellow */
+    color: #263238;
 }
