@@ -40,18 +40,27 @@ header {
 	text-align: center;
 	border-bottom: 5px solid var(--color-accent-yellow);
 	flex-shrink: 0;
+	min-height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
 }
 
 header h1 {
 	margin: 0;
 	display: inline-block;
 	vertical-align: middle;
+	white-space: nowrap;
 }
 
 .logo {
 	width: 60px;
-	vertical-align: middle;
+	height: 60px;
 	margin-right: 10px;
+	aspect-ratio: 1 / 1;
+	object-fit: contain;
+	display: block;
 }
 
 .container {
@@ -99,13 +108,14 @@ header h1 {
 	overflow: hidden;
 	cursor: pointer;
 	user-select: none;
+	min-height: 44px;
+	line-height: 20px;
 
 	/* Modern Material Design transitions */
 	transition: background-color var(--transition-normal) var(--transition-easing),
 		color var(--transition-normal) var(--transition-easing),
 		border-color var(--transition-normal) var(--transition-easing),
-		box-shadow var(--transition-normal) var(--transition-easing),
-		transform var(--transition-fast) var(--transition-easing);
+		box-shadow var(--transition-normal) var(--transition-easing);
 }
 
 /* Ripple effect pseudo-element */
@@ -136,7 +146,6 @@ header h1 {
 	box-shadow: 0 4px 12px rgba(33, 150, 243, 0.25),
 		inset 0 1px 0 rgba(255, 255, 255, 0.2);
 	font-weight: bold;
-	transform: translateY(-2px);
 }
 
 .sidebar ul li a:hover:not(.active-nav) {
@@ -145,12 +154,6 @@ header h1 {
 	border-color: var(--color-accent-yellow);
 	text-decoration: none;
 	box-shadow: 0 6px 16px rgba(255, 214, 0, 0.25);
-	transform: translateY(-3px);
-}
-
-.sidebar ul li a:active:not(.active-nav) {
-	transform: translateY(-1px);
-	box-shadow: 0 3px 8px rgba(255, 214, 0, 0.15);
 }
 
 .sidebar ul li a:focus {
@@ -340,5 +343,6 @@ footer p {
 
 	.logo {
 		width: 50px;
+		height: 50px;
 	}
 }
