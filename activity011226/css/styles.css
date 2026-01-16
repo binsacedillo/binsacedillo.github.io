@@ -36,11 +36,11 @@ body {
 header {
 	background: var(--color-sky-blue);
 	color: var(--color-white);
-	padding: 20px;
+	padding: 10px 20px;
 	text-align: center;
 	border-bottom: 5px solid var(--color-accent-yellow);
 	flex-shrink: 0;
-	min-height: 100px;
+	height: 90px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -49,9 +49,10 @@ header {
 
 header h1 {
 	margin: 0;
-	display: inline-block;
-	vertical-align: middle;
+	display: inline;
 	white-space: nowrap;
+	line-height: 1;
+	font-size: 24px;
 }
 
 .logo {
@@ -334,11 +335,13 @@ footer p {
 	}
 
 	header {
-		padding: 15px;
+		height: 70px;
+		padding: 10px 15px;
 	}
 
 	header h1 {
-		font-size: 1.5em;
+		font-size: 18px;
+		line-height: 1;
 	}
 
 	.logo {
