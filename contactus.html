@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SkyHigh Rentals</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="javascript/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>SkyHigh Rentals</h1>
+    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <!-- Navigation links will be injected by JS -->
+            </ul>
+        </nav>
+        <main>
+            <h2>Book a Discovery Flight</h2>
+            <form class="contact-form" id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="message">Message / Preferred Date:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Book Now</button>
+            </form>
+            <div id="formResult"></div>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2026 SkyHigh Rentals. All rights reserved.</p>
+        <p>Contact: info@skyhighrentals.com | 123-456-7890</p>
+    </footer>
+</body>
+
+</html>
