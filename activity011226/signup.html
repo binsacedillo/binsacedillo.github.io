@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - SkyHigh Rentals</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>SkyHigh Rentals</h1>
+    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <!-- Navigation links will be injected by JS -->
+            </ul>
+        </nav>
+        <main>
+            <div class="auth-container">
+                <h2>Create Your Account</h2>
+                <form class="auth-form" id="signupForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail">Email Address:</label>
+                        <input type="email" id="signupEmail" name="email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobileNumber">Mobile Number:</label>
+                        <input type="tel" id="mobileNumber" name="mobileNumber" required placeholder="e.g., 09171234567">
+                    </div>
+                    <div class="form-group">
+                        <label for="homeAddress">Home Address:</label>
+                        <textarea id="homeAddress" name="homeAddress" required placeholder="Enter your complete address" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password:</label>
+                        <input type="password" id="signupPassword" name="password" required placeholder="Create a password" minlength="8">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Re-enter your password" minlength="8">
+                    </div>
+                    <div id="passwordError" class="error-message"></div>
+                    <button type="submit" class="btn-primary">Sign Up</button>
+                    <div class="form-footer">
+                        <p>Already have an account? <a href="login.html" class="link-secondary">Login here</a></p>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2026 SkyHigh Rentals. All rights reserved.</p>
+        <p>Contact: info@skyhighrentals.com | 123-456-7890</p>
+    </footer>
+    <script src="javascript/script.js" defer></script>
+</body>
+
+</html>
