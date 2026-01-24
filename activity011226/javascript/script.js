@@ -10,8 +10,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form?.addEventListener('submit', (e) => {
         e.preventDefault();
-        const { name, message } = Object.fromEntries(new FormData(form));
-        result.innerHTML = `<h3>Submitted Information</h3><p><strong>Name:</strong> ${name}</p><p><strong>Message:</strong> ${message}</p>`;
+        // Clear previous errors
+        ['name','email','subject','message'].forEach(id => {
+            document.getElementById(id+'Error').textContent = '';
+        });
+        let valid = true;
+        const fd = Object.fromEntries(new FormData(form));
+        // Name validation
+        if (!fd.name || fd.name.trim().length < 2) {
+            document.getElementById('nameError').textContent = 'Please enter your full name.';
+            valid = false;
+        }
+        // Email validation
+        if (!fd.email || !/^\S+@\S+\.\S+$/.test(fd.email)) {
+            document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+            valid = false;
+        }
+        // Subject validation
+        if (!fd.subject || fd.subject.trim().length < 3) {
+            document.getElementById('subjectError').textContent = 'Please enter a subject.';
+            valid = false;
+        }
+        // Message validation
+        if (!fd.message || fd.message.trim().length < 5) {
+            document.getElementById('messageError').textContent = 'Please enter a message (at least 5 characters).';
+            valid = false;
+        }
+        if (!valid) return;
+        result.innerHTML = `<h3>Thank you for contacting us!</h3><p>We have received your message and will respond soon.</p><ul><li><strong>Name:</strong> ${fd.name}</li><li><strong>Email:</strong> ${fd.email}</li><li><strong>Subject:</strong> ${fd.subject}</li><li><strong>Message:</strong> ${fd.message}</li></ul>`;
         form.reset();
     });
 
