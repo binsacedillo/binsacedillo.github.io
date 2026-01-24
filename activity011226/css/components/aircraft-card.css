@@ -1,0 +1,88 @@
+/* =========================================
+   COMPONENT: Aircraft Card
+   ========================================= */
+.products {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 32px;
+	margin-top: 24px;
+	width: 100%;
+}
+
+.product-card {
+	background: var(--color-cloud-white);
+	border-radius: 12px;
+	padding: 0;
+	box-shadow: 0 2px 10px rgba(33, 150, 243, 0.10);
+	border: 1.5px solid var(--color-contrail-silver);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: box-shadow 0.2s, transform 0.2s;
+	outline: none;
+	min-height: 370px;
+}
+
+.product-card:focus, .product-card:hover {
+	box-shadow: 0 6px 24px rgba(33, 150, 243, 0.18);
+	border-color: var(--color-sky-blue);
+	transform: translateY(-2px) scale(1.01);
+}
+
+.product-img {
+	width: 100%;
+	max-width: 240px;
+	aspect-ratio: 4/3;
+	height: auto;
+	min-height: 160px;
+	max-height: 180px;
+	object-fit: cover;
+	display: block;
+	margin: 18px auto 0 auto;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.product-info {
+	padding: 18px 18px 22px 18px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+.product-info h3 {
+	margin: 0 0 4px 0;
+	font-size: 1.18rem;
+	color: var(--color-jet-gray);
+	font-weight: 600;
+	text-align: center;
+}
+
+.product-price {
+	font-size: 1.08rem;
+	color: var(--color-sky-blue);
+	margin-bottom: 8px;
+	font-weight: bold;
+}
+
+.details-btn {
+	background: var(--color-sky-blue);
+	color: var(--color-white);
+	border: none;
+	border-radius: 6px;
+	padding: 10px 22px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	margin-top: 8px;
+	transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+	box-shadow: 0 1px 4px rgba(33, 150, 243, 0.10);
+	outline: none;
+}
+.details-btn:hover, .details-btn:focus {
+	background: var(--color-accent-yellow);
+	color: var(--color-jet-gray);
+	box-shadow: 0 2px 8px rgba(255, 214, 0, 0.18);
+}

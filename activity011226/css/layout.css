@@ -1,0 +1,132 @@
+/* =========================================
+   LAYOUT (Sidebar, Nav, Footer)
+   ========================================= */
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background: var(--color-cloud-white);
+	color: var(--color-text);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	background: var(--color-sky-blue);
+	color: var(--color-white);
+	padding: 10px 20px;
+	text-align: center;
+	border-bottom: 5px solid var(--color-accent-yellow);
+	flex-shrink: 0;
+	height: 90px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	contain: layout style paint;
+	overflow: hidden;
+}
+
+header h1 {
+	margin: 0;
+	display: inline;
+	white-space: nowrap;
+	line-height: 1;
+	font-size: 24px;
+	flex: 0 0 auto;
+}
+
+.logo {
+	width: 60px;
+	height: 60px;
+	margin-right: 10px;
+	margin-bottom: 0;
+	aspect-ratio: 1 / 1;
+	object-fit: contain;
+	display: block;
+	flex: 0 0 60px;
+	contain: layout paint;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 4px;
+}
+
+.container {
+	display: flex;
+	flex: 1 0 auto;
+}
+
+.sidebar {
+	width: 210px;
+	background: var(--color-jet-gray);
+	color: var(--color-white);
+	padding: 28px 0;
+	box-shadow: 2px 0 8px rgba(38, 50, 56, 0.04);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.sidebar ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.sidebar ul li {
+	margin: 10px 0 !important;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 48px;
+	padding: 0 !important;
+}
+
+.sidebar ul li a {
+	width: 92%;
+	display: block;
+	padding: 12px 20px;
+	margin: 0 auto;
+	border-radius: 6px;
+	text-align: center;
+	background: transparent;
+	border: 2px solid transparent;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	user-select: none;
+	min-height: 44px;
+	line-height: 20px;
+	font-weight: bold;
+	color: var(--color-accent-yellow);
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+main {
+	flex: 1;
+	padding: 40px;
+	background: var(--color-white);
+	border-left: 2px solid var(--color-contrail-silver);
+}
+
+main h2 {
+	margin-top: 0;
+}
+
+footer {
+	background: var(--color-jet-gray);
+	color: var(--color-white);
+	text-align: center;
+	padding: 15px;
+	border-top: 5px solid var(--color-sky-blue);
+	flex-shrink: 0;
+	margin-top: auto;
+}
+
+footer p {
+	margin: 5px 0;
+}

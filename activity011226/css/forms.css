@@ -1,0 +1,113 @@
+/* =========================================
+   COMPONENT: Forms (Contact, Auth)
+   ========================================= */
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+	gap: 15px;
+}
+
+.contact-form label {
+	font-weight: bold;
+	color: var(--color-jet-gray);
+}
+
+.contact-form input,
+.contact-form textarea {
+	padding: 10px;
+	border: 1px solid var(--color-contrail-silver);
+	border-radius: 4px;
+	background: var(--color-white);
+	color: var(--color-text);
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+	outline: none;
+	border-color: var(--color-sky-blue);
+	box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+.contact-form button {
+	background: var(--color-sky-blue);
+	color: var(--color-white);
+	border: none;
+	padding: 12px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background 0.2s, color 0.2s;
+	font-size: 14px;
+}
+
+.contact-form button:hover {
+	background: var(--color-accent-yellow);
+	color: var(--color-jet-gray);
+}
+
+.contact-form button:focus {
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.3);
+}
+
+.auth-container {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.auth-form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	background: var(--color-cloud-white);
+	padding: 30px;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(33, 150, 243, 0.08);
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.form-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 15px;
+}
+
+.form-group label {
+	font-weight: bold;
+	color: var(--color-jet-gray);
+	font-size: 14px;
+}
+
+.auth-form input,
+.auth-form textarea {
+	padding: 12px;
+	border: 2px solid var(--color-contrail-silver);
+	border-radius: 6px;
+	background: var(--color-white);
+	color: var(--color-text);
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-form input:focus,
+.auth-form textarea:focus {
+	outline: none;
+	border-color: var(--color-sky-blue);
+	box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+.auth-form textarea {
+	resize: vertical;
+	min-height: 80px;
+}
