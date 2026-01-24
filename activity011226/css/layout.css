@@ -179,7 +179,7 @@ footer {
 	color: var(--color-white);
 	text-align: center;
 	padding: 15px;
-	border-top: 5px solid var(--color-sky-blue);
+	/* border-top removed to prevent double divider */
 	flex-shrink: 0;
 	margin-top: auto;
 }
