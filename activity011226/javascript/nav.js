@@ -10,7 +10,8 @@ export function injectAuthNav() {
         { href: 'index.html', text: 'Home' },
         { href: 'aboutus.html', text: 'About' },
         { href: 'contactus.html', text: 'Contact Us' },
-        { href: 'cart.html', text: 'Cart' }
+        { href: 'cart.html', text: 'Cart' },
+        { href: 'catalog.html', text: 'Product Catalog' }
     ];
     navLinks.forEach(linkData => {
         const li = document.createElement('li');
