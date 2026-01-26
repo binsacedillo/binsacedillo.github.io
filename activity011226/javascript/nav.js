@@ -8,10 +8,10 @@ export function injectAuthNav() {
     sidebarList.innerHTML = '';
     const navLinks = [
         { href: 'index.html', text: 'Home' },
-        { href: 'aboutus.html', text: 'About' },
-        { href: 'contactus.html', text: 'Contact Us' },
+        { href: 'catalog.html', text: 'Product Catalog' },
         { href: 'cart.html', text: 'Cart' },
-        { href: 'catalog.html', text: 'Product Catalog' }
+        { href: 'aboutus.html', text: 'About' },
+        { href: 'contactus.html', text: 'Contact Us' }
     ];
     navLinks.forEach(linkData => {
         const li = document.createElement('li');
