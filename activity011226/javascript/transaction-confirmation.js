@@ -7,6 +7,6 @@ function getParam(name) {
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('txnId').textContent = getParam('txn') || Math.floor(Math.random() * 1e8);
     document.getElementById('txnDate').textContent = new Date().toLocaleString();
-    document.getElementById('payMethod').textContent = getParam('pay') || 'N/A';    
+    document.getElementById('payMethod').textContent = getParam('pay') || 'N/A';
     document.getElementById('deliveryOpt').textContent = getParam('delivery') || 'N/A';
 });
