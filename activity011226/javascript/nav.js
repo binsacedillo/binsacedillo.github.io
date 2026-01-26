@@ -9,7 +9,8 @@ export function injectAuthNav() {
     const navLinks = [
         { href: 'index.html', text: 'Home' },
         { href: 'aboutus.html', text: 'About' },
-        { href: 'contactus.html', text: 'Contact Us' }
+        { href: 'contactus.html', text: 'Contact Us' },
+        { href: 'cart.html', text: 'Cart' }
     ];
     navLinks.forEach(linkData => {
         const li = document.createElement('li');

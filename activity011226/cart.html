@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - SkyHigh Rentals</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <!-- Navigation links will be injected by JS -->
+            </ul>
+        </nav>
+        <main>
+            <h2>Your Cart</h2>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Aircraft</th>
+                        <th>Rate (per hour)</th>
+                        <th>Hours</th>
+                        <th>Subtotal</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cessna 172S</td>
+                        <td>₱8,000</td>
+                        <td>2</td>
+                        <td>₱16,000</td>
+                        <td><button class="remove-btn">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td>Beechcraft King Air</td>
+                        <td>₱18,000</td>
+                        <td>1</td>
+                        <td>₱18,000</td>
+                        <td><button class="remove-btn">Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="cart-total">
+                <strong>Total: ₱34,000</strong>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2026 SkyHigh Rentals. All rights reserved.</p>
+        <p>Contact: info@skyhighrentals.com | 123-456-7890</p>
+    </footer>
+
+    <script type="module" src="javascript/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Remove cart item
+            document.querySelectorAll('.remove-btn').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    const row = btn.closest('tr');
+                    if (row) row.remove();
+                });
+            });
+            // Checkout button
+            var checkoutBtn = document.querySelector('.checkout-btn');
+            if (checkoutBtn) {
+                checkoutBtn.disabled = false;
+                checkoutBtn.addEventListener('click', function () {
+                    window.location.href = 'payment-delivery.html';
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

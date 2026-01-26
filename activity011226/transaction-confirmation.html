@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Confirmation - SkyHigh Rentals</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+    <header>
+        <h1>Transaction Confirmation</h1>
+    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <!-- Navigation links will be injected by JS -->
+            </ul>
+        </nav>
+        <main>
+            <h2>Thank You for Your Purchase!</h2>
+            <div class="receipt">
+                <h3>E-Receipt</h3>
+                <p><strong>Transaction ID:</strong> <span id="txnId"></span></p>
+                <p><strong>Date:</strong> <span id="txnDate"></span></p>
+                <p><strong>Payment Method:</strong> <span id="payMethod"></span></p>
+                <p><strong>Delivery Option:</strong> <span id="deliveryOpt"></span></p>
+                <p><strong>Total Paid:</strong> <span id="totalPaid">₱34,000</span></p>
+            </div>
+            <p>A copy of this receipt has been sent to your email.</p>
+            <a href="index.html" class="btn-primary">Return to Home</a>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2026 SkyHigh Rentals. All rights reserved.</p>
+        <p>Contact: info@skyhighrentals.com | 123-456-7890</p>
+    </footer>
+    <script type="module" src="javascript/script.js"></script>
+    <script src="javascript/transaction-confirmation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment & Delivery - SkyHigh Rentals</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+    <header>
+        <h1>Payment & Delivery</h1>
+    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <!-- Navigation links will be injected by JS -->
+            </ul>
+        </nav>
+        <main>
+            <h2>Choose Payment & Delivery</h2>
+            <form class="payment-delivery-form" id="paymentDeliveryForm">
+                <fieldset>
+                    <legend>Payment Method</legend>
+                    <label><input type="radio" name="payment" value="credit" required> Credit Card</label><br>
+                    <label><input type="radio" name="payment" value="paypal"> PayPal</label><br>
+                    <label><input type="radio" name="payment" value="gcash"> GCash</label><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Delivery Option</legend>
+                    <label><input type="radio" name="delivery" value="pickup" required> Pick Up at Airport</label><br>
+                    <label><input type="radio" name="delivery" value="home"> Home Delivery</label><br>
+                </fieldset>
+                <button type="submit" class="btn-primary">Continue</button>
+            </form>
+            <div id="paymentDeliveryResult"></div>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2026 SkyHigh Rentals. All rights reserved.</p>
+        <p>Contact: info@skyhighrentals.com | 123-456-7890</p>
+    </footer>
+    <script type="module" src="javascript/script.js"></script>
+    <script src="javascript/payment-delivery.js"></script>
+</body>
+
+</html>
