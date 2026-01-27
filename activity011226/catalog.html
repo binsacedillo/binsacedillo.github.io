@@ -25,19 +25,39 @@
         <main>
             <h2>Our Aircraft Catalog</h2>
             <section class="products" aria-label="Aircraft Catalog">
+                <!-- Example product card, repeat for each aircraft -->
                 <article class="product-card" tabindex="0" aria-label="Piper Archer">
                     <img src="images/piperarcher.jpg" alt="Piper Archer aircraft" class="product-img" />
                     <div class="product-info">
                         <h3>Piper Archer</h3>
                         <p class="product-price"><strong>₱9,500/hr</strong></p>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn" aria-label="Add Piper Archer to cart">Add to Cart</button>
+                            <div class="cart-controls" hidden>
+                                <button class="decrease-qty-btn" aria-label="Decrease quantity">-</button>
+                                <input type="number" class="cart-qty-input" value="1" min="1" aria-label="Quantity">
+                                <button class="increase-qty-btn" aria-label="Increase quantity">+</button>
+                                <button class="remove-from-cart-btn" aria-label="Remove from cart">Remove</button>
+                            </div>
+                        </div>
                         <button class="details-btn" aria-label="View details for Piper Archer">View Details</button>
                     </div>
                 </article>
+                <!-- Repeat for each aircraft, updating names, images, and prices -->
                 <article class="product-card" tabindex="0" aria-label="Diamond DA40">
                     <img src="images/da40.jpg" alt="Diamond DA40 aircraft" class="product-img" />
                     <div class="product-info">
                         <h3>Diamond DA40</h3>
                         <p class="product-price"><strong>₱11,000/hr</strong></p>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn" aria-label="Add Diamond DA40 to cart">Add to Cart</button>
+                            <div class="cart-controls" hidden>
+                                <button class="decrease-qty-btn" aria-label="Decrease quantity">-</button>
+                                <input type="number" class="cart-qty-input" value="1" min="1" aria-label="Quantity">
+                                <button class="increase-qty-btn" aria-label="Increase quantity">+</button>
+                                <button class="remove-from-cart-btn" aria-label="Remove from cart">Remove</button>
+                            </div>
+                        </div>
                         <button class="details-btn" aria-label="View details for Diamond DA40">View Details</button>
                     </div>
                 </article>
@@ -46,6 +66,15 @@
                     <div class="product-info">
                         <h3>Cirrus SR22</h3>
                         <p class="product-price"><strong>₱13,000/hr</strong></p>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn" aria-label="Add Cirrus SR22 to cart">Add to Cart</button>
+                            <div class="cart-controls" hidden>
+                                <button class="decrease-qty-btn" aria-label="Decrease quantity">-</button>
+                                <input type="number" class="cart-qty-input" value="1" min="1" aria-label="Quantity">
+                                <button class="increase-qty-btn" aria-label="Increase quantity">+</button>
+                                <button class="remove-from-cart-btn" aria-label="Remove from cart">Remove</button>
+                            </div>
+                        </div>
                         <button class="details-btn" aria-label="View details for Cirrus SR22">View Details</button>
                     </div>
                 </article>
@@ -54,6 +83,15 @@
                     <div class="product-info">
                         <h3>Beechcraft Baron</h3>
                         <p class="product-price"><strong>₱15,000/hr</strong></p>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn" aria-label="Add Beechcraft Baron to cart">Add to Cart</button>
+                            <div class="cart-controls" hidden>
+                                <button class="decrease-qty-btn" aria-label="Decrease quantity">-</button>
+                                <input type="number" class="cart-qty-input" value="1" min="1" aria-label="Quantity">
+                                <button class="increase-qty-btn" aria-label="Increase quantity">+</button>
+                                <button class="remove-from-cart-btn" aria-label="Remove from cart">Remove</button>
+                            </div>
+                        </div>
                         <button class="details-btn" aria-label="View details for Beechcraft Baron">View Details</button>
                     </div>
                 </article>
@@ -62,6 +100,15 @@
                     <div class="product-info">
                         <h3>Cessna 208 Caravan</h3>
                         <p class="product-price"><strong>₱20,000/hr</strong></p>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn" aria-label="Add Cessna 208 Caravan to cart">Add to Cart</button>
+                            <div class="cart-controls" hidden>
+                                <button class="decrease-qty-btn" aria-label="Decrease quantity">-</button>
+                                <input type="number" class="cart-qty-input" value="1" min="1" aria-label="Quantity">
+                                <button class="increase-qty-btn" aria-label="Increase quantity">+</button>
+                                <button class="remove-from-cart-btn" aria-label="Remove from cart">Remove</button>
+                            </div>
+                        </div>
                         <button class="details-btn" aria-label="View details for Cessna 208 Caravan">View Details</button>
                     </div>
                 </article>
@@ -70,6 +117,15 @@
                     <div class="product-info">
                         <h3>Piper Seneca</h3>
                         <p class="product-price"><strong>₱14,000/hr</strong></p>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn" aria-label="Add Piper Seneca to cart">Add to Cart</button>
+                            <div class="cart-controls" hidden>
+                                <button class="decrease-qty-btn" aria-label="Decrease quantity">-</button>
+                                <input type="number" class="cart-qty-input" value="1" min="1" aria-label="Quantity">
+                                <button class="increase-qty-btn" aria-label="Increase quantity">+</button>
+                                <button class="remove-from-cart-btn" aria-label="Remove from cart">Remove</button>
+                            </div>
+                        </div>
                         <button class="details-btn" aria-label="View details for Piper Seneca">View Details</button>
                     </div>
                 </article>
@@ -78,6 +134,15 @@
                     <div class="product-info">
                         <h3>Cessna 172S</h3>
                         <p class="product-price"><strong>₱8,000/hr</strong></p>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn" aria-label="Add Cessna 172S to cart">Add to Cart</button>
+                            <div class="cart-controls" hidden>
+                                <button class="decrease-qty-btn" aria-label="Decrease quantity">-</button>
+                                <input type="number" class="cart-qty-input" value="1" min="1" aria-label="Quantity">
+                                <button class="increase-qty-btn" aria-label="Increase quantity">+</button>
+                                <button class="remove-from-cart-btn" aria-label="Remove from cart">Remove</button>
+                            </div>
+                        </div>
                         <button class="details-btn" aria-label="View details for Cessna 172S">View Details</button>
                     </div>
                 </article>
@@ -86,6 +151,15 @@
                     <div class="product-info">
                         <h3>Beechcraft King Air</h3>
                         <p class="product-price"><strong>₱18,000/hr</strong></p>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn" aria-label="Add Beechcraft King Air to cart">Add to Cart</button>
+                            <div class="cart-controls" hidden>
+                                <button class="decrease-qty-btn" aria-label="Decrease quantity">-</button>
+                                <input type="number" class="cart-qty-input" value="1" min="1" aria-label="Quantity">
+                                <button class="increase-qty-btn" aria-label="Increase quantity">+</button>
+                                <button class="remove-from-cart-btn" aria-label="Remove from cart">Remove</button>
+                            </div>
+                        </div>
                         <button class="details-btn" aria-label="View details for Beechcraft King Air">View Details</button>
                     </div>
                 </article>

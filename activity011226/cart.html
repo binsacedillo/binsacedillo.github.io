@@ -32,24 +32,43 @@
                         <th>Rate (per hour)</th>
                         <th>Hours</th>
                         <th>Subtotal</th>
-                        <th>Remove</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- Example cart row, repeat for each item in cart -->
                     <tr>
                         <td>Cessna 172S</td>
                         <td>₱8,000</td>
-                        <td>2</td>
+                        <td>
+                            <div class="cart-qty-controls">
+                                <button class="decrease-qty-btn" aria-label="Decrease quantity">-</button>
+                                <input type="number" class="cart-qty-input" value="2" min="1" aria-label="Quantity">
+                                <button class="increase-qty-btn" aria-label="Increase quantity">+</button>
+                            </div>
+                        </td>
                         <td>₱16,000</td>
-                        <td><button class="remove-btn">Remove</button></td>
+                        <td><button class="remove-from-cart-btn">Remove</button></td>
                     </tr>
                     <tr>
                         <td>Beechcraft King Air</td>
                         <td>₱18,000</td>
-                        <td>1</td>
+                        <td>
+                            <div class="cart-qty-controls">
+                                <button class="decrease-qty-btn" aria-label="Decrease quantity">-</button>
+                                <input type="number" class="cart-qty-input" value="1" min="1" aria-label="Quantity">
+                                <button class="increase-qty-btn" aria-label="Increase quantity">+</button>
+                            </div>
+                        </td>
                         <td>₱18,000</td>
-                        <td><button class="remove-btn">Remove</button></td>
+                        <td><button class="remove-from-cart-btn">Remove</button></td>
                     </tr>
+                    <!-- If cart is empty, show this row -->
+                    <!--
+                    <tr class="cart-empty-row">
+                        <td colspan="5" style="text-align:center; color:#888;">Your cart is empty.</td>
+                    </tr>
+                    -->
                 </tbody>
             </table>
             <div class="cart-total">
