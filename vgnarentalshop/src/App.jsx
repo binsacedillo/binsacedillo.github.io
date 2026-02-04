@@ -23,7 +23,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename="/vgnarentalshop">
+    <Router basename="/">
       <AuthProvider>
         <CartProvider>
           <MainLayout>
