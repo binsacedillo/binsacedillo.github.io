@@ -1,0 +1,4 @@
+node_modules/
+vgnarentalshop/
+.env
+.env.local
