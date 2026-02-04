@@ -6,7 +6,8 @@ export default defineConfig({
   plugins: [react()],
   base: '/vgnarentalshop/',
   build: {
-    outDir: '../docs/vgnarentalshop',
+    outDir: 'dist',
     assetsDir: 'assets',
+    emptyOutDir: true,
   }
 })
