@@ -20,12 +20,24 @@ import Contact from './pages/Contact'
 import AircraftDetails from './components/aircraft/AircraftDetails'
 
 function App() {
+  const handleSkipToMain = (e) => {
+    e.preventDefault();
+    const mainContent = document.querySelector('.main-content');
+    if (mainContent) {
+      mainContent.focus();
+      mainContent.scrollIntoView();
+    }
+  };
+
   return (
     <Router>
       <div className="app">
+        <a href="#main-content" className="skip-link" onClick={handleSkipToMain}>
+          Skip to main content
+        </a>
         <NavigationSidebar />
         <div className="app-wrapper">
-          <main className="main-content">
+          <main className="main-content" id="main-content" tabIndex={-1}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/catalog" element={<Catalog />} />
