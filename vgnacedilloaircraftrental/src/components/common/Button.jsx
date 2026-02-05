@@ -70,6 +70,7 @@ const Button = ({
         className={buttonClasses}
         onClick={disabled || loading ? (e) => e.preventDefault() : onClick}
         aria-disabled={disabled}
+        role="button"
       >
         {content}
       </Link>

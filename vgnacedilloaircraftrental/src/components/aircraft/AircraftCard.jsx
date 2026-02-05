@@ -17,9 +17,7 @@ const AircraftCard = ({ aircraft }) => {
       <p className="price">${aircraft.price.toLocaleString()}</p>
       <p className="description">{aircraft.description}</p>
       <div className="card-actions">
-        <Link to={`/aircraft/${aircraft.id}`}>
-          <Button variant="secondary">View Details</Button>
-        </Link>
+        <Button variant="secondary" to={`/aircraft/${aircraft.id}`}>View Details</Button>
         <Button onClick={handleAddToCart}>Add to Cart</Button>
       </div>
     </div>

@@ -68,7 +68,7 @@ const Contact = () => {
         </p>
 
         {submitted && (
-          <div className="success-message">
+          <div className="success-message" role="status" aria-live="polite">
             ✓ Thank you for your message! We'll get back to you soon.
           </div>
         )}
@@ -130,7 +130,11 @@ const Contact = () => {
                     </div>
                     <button
                       className="delete-btn"
-                      onClick={() => handleDeleteMessage(msg.id)}
+                      onClick={() => {
+                        if (window.confirm('Are you sure you want to delete this message? This action cannot be undone.')) {
+                          handleDeleteMessage(msg.id);
+                        }
+                      }}
                       aria-label="Delete message"
                     >
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
