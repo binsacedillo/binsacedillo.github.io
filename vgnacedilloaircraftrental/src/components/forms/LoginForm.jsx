@@ -32,7 +32,7 @@ const LoginForm = () => {
   return (
     <form className="login-form" onSubmit={handleSubmit}>
       <h2>Login</h2>
-      {displayError && <div className="error-message">{displayError}</div>}
+      {displayError && <div className="error-message" role="alert" aria-live="assertive">{displayError}</div>}
       <div className="form-group">
         <label htmlFor="email">Email</label>
         <input

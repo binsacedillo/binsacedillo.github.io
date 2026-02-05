@@ -41,6 +41,9 @@ const PaymentForm = () => {
             onChange={handleChange}
             placeholder="1234 5678 9012 3456"
             required
+            autoComplete="cc-number"
+            inputMode="numeric"
+            pattern="[0-9\\s]{13,23}"
           />
         </div>
         <div className="form-group">
@@ -53,6 +56,7 @@ const PaymentForm = () => {
             onChange={handleChange}
             placeholder="John Doe"
             required
+            autoComplete="cc-name"
           />
         </div>
         <div className="form-row">
@@ -66,6 +70,9 @@ const PaymentForm = () => {
               onChange={handleChange}
               placeholder="MM/YY"
               required
+              autoComplete="cc-exp"
+              inputMode="numeric"
+              pattern="\\d{2}/\\d{2}"
             />
           </div>
           <div className="form-group">
@@ -78,6 +85,9 @@ const PaymentForm = () => {
               onChange={handleChange}
               placeholder="123"
               required
+              autoComplete="cc-csc"
+              inputMode="numeric"
+              pattern="[0-9]{3,4}"
             />
           </div>
         </div>
@@ -95,6 +105,7 @@ const PaymentForm = () => {
             onChange={handleChange}
             placeholder="123 Main St"
             required
+            autoComplete="street-address"
           />
         </div>
         <div className="form-group">
@@ -107,6 +118,7 @@ const PaymentForm = () => {
             onChange={handleChange}
             placeholder="New York"
             required
+            autoComplete="address-level2"
           />
         </div>
         <div className="form-group">
@@ -119,6 +131,9 @@ const PaymentForm = () => {
             onChange={handleChange}
             placeholder="10001"
             required
+            autoComplete="postal-code"
+            inputMode="numeric"
+            pattern="[0-9]{5}(-[0-9]{4})?"
           />
         </div>
       </div>

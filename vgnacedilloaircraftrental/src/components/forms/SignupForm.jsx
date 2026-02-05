@@ -58,8 +58,8 @@ const SignupForm = () => {
   return (
     <form className="signup-form" onSubmit={handleSubmit}>
       <h2>Sign Up</h2>
-      {displayError && <div className="error-message">{displayError}</div>}
-      {success && <div className="success-message">{success}</div>}
+      {displayError && <div className="error-message" role="alert" aria-live="assertive">{displayError}</div>}
+      {success && <div className="success-message" role="status" aria-live="polite">{success}</div>}
       <div className="form-group">
         <label htmlFor="name">Name *</label>
         <input
@@ -84,6 +84,7 @@ const SignupForm = () => {
           placeholder="Enter your email"
           disabled={loading}
           required
+          autoComplete="email"
         />
       </div>
       <div className="form-group">
@@ -96,6 +97,8 @@ const SignupForm = () => {
           onChange={handleChange}
           placeholder="Enter your phone number (optional)"
           disabled={loading}
+          inputMode="tel"
+          autoComplete="tel"
         />
       </div>
       <div className="form-group">
