@@ -31,3 +31,4 @@ jobs:
           branch: gh-pages
           folder: vgnaaircraftrental/react-app/dist
           clean: true
+          target-folder: vgnaaircraftrental
