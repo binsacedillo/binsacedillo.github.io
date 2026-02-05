@@ -1,0 +1,60 @@
+/* =========================================
+   FOOTER STYLES
+   ========================================= */
+.aircraft-card {
+  background: var(--color-cloud-white);
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: var(--shadow-aircraft);
+  border: 1.5px solid var(--color-contrail-silver);
+  transition: box-shadow 0.2s, transform 0.2s;
+  min-height: 370px;
+  display: flex;
+  flex-direction: column;
+}
+
+.aircraft-card:hover {
+  box-shadow: var(--shadow-aircraft-hover);
+  border-color: var(--color-sky-blue);
+  transform: translateY(-2px) scale(1.01);
+}
+
+.aircraft-card img {
+  width: 100%;
+  max-width: 240px;
+  aspect-ratio: 4/3;
+  height: auto;
+  min-height: 160px;
+  max-height: 180px;
+  object-fit: cover;
+  display: block;
+  margin: 18px auto 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.aircraft-card h3 {
+  margin: 0 0 4px 0;
+  font-size: 1.18rem;
+  color: var(--color-jet-gray);
+  font-weight: 600;
+  text-align: center;
+}
+
+.aircraft-card .price {
+  font-size: 1.08rem;
+  font-weight: bold;
+  color: var(--color-sky-blue);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.aircraft-card .description {
+  color: var(--dark-gray);
+  margin-bottom: var(--spacing-md);
+}
+
+.card-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}

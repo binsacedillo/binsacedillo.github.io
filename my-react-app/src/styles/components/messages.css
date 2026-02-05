@@ -1,0 +1,18 @@
+/* Messages */
+.error-message {
+  background-color: var(--danger-bg);
+  color: var(--danger-color-dark);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  margin-bottom: var(--spacing-md);
+  border-left: 4px solid var(--danger-color);
+}
+
+.success-message {
+  background-color: var(--success-bg);
+  color: var(--success-color-dark);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  margin-bottom: var(--spacing-md);
+  border-left: 4px solid var(--success-color);
+}

@@ -1,0 +1,74 @@
+/* =========================================
+   AIRCRAFT CARD STYLES
+   ========================================= */
+
+/* Cart Item */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.cart-item img {
+  width: 100px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: var(--border-radius-sm);
+}
+
+.cart-item .item-info {
+  flex: 1;
+}
+
+.cart-item .item-quantity {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.cart-item .item-quantity button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cart-item .item-quantity button:hover {
+  background-color: var(--gray);
+}
+
+/* Cart Summary */
+.cart-summary {
+  background: var(--white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.cart-summary h2 {
+  margin-top: 0;
+  color: var(--color-sky-blue);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.summary-row.total {
+  font-size: var(--font-size-large);
+  font-weight: bold;
+  color: var(--color-sky-blue);
+  border-bottom: none;
+  margin-top: var(--spacing-md);
+}
