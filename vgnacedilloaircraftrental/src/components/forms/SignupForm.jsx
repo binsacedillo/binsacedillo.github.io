@@ -91,10 +91,16 @@ const SignupForm = () => {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          placeholder="Enter your phone number (optional)"
+          placeholder="+1234567890 (E.164 format)"
+          pattern="^\+?[1-9]\d{1,14}$"
+          title="Enter phone number in E.164 format (e.g., +1234567890)"
           inputMode="tel"
           autoComplete="tel"
+          aria-describedby="phone-help"
         />
+        <small id="phone-help" className="form-help">
+          Optional. Use international format: +[country code][number] (e.g., +11234567890)
+        </small>
       </div>
       <div className="form-group">
         <label htmlFor="address">Address</label>
@@ -105,6 +111,7 @@ const SignupForm = () => {
           value={formData.address}
           onChange={handleChange}
           placeholder="Enter your address (optional)"
+          autoComplete="street-address"
         />
       </div>
       <div className="form-group">
@@ -116,8 +123,15 @@ const SignupForm = () => {
           value={formData.password}
           onChange={handleChange}
           placeholder="Enter your password (min 6 characters)"
+          minLength="6"
+          maxLength="128"
+          autoComplete="new-password"
+          aria-describedby="password-help"
           required
         />
+        <small id="password-help" className="form-help">
+          Must be 6-128 characters long
+        </small>
       </div>
       <div className="form-group">
         <label htmlFor="confirmPassword">Confirm Password *</label>
@@ -128,6 +142,9 @@ const SignupForm = () => {
           value={formData.confirmPassword}
           onChange={handleChange}
           placeholder="Confirm your password"
+          minLength="6"
+          maxLength="128"
+          autoComplete="new-password"
           required
         />
       </div>

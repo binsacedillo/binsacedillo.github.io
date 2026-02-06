@@ -1,40 +1,80 @@
 /* Form Styles */
 .form-group {
-  margin-bottom: var(--spacing-md);
+  margin-bottom: 20px;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: 8px;
   font-weight: 600;
   color: var(--color-jet-gray);
+  font-size: var(--font-size-base);
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: var(--spacing-sm) var(--spacing-md);
-  border: 2px solid var(--light-gray);
-  border-radius: var(--border-radius-sm);
+  padding: 12px var(--spacing-md);
+  border: 1px solid var(--light-gray);
+  border-radius: var(--border-radius);
   font-size: var(--font-size-base);
+  line-height: 1.5;
   transition: border-color var(--transition-fast);
+  box-sizing: border-box;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--color-sky-blue);
-  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
 }
 
-.form-group input:focus-visible,
-.form-group textarea:focus-visible {
-  outline: 2px solid var(--color-sky-blue);
-  outline-offset: 2px;
+.form-group input:valid:not(:placeholder-shown),
+.form-group textarea:valid:not(:placeholder-shown) {
+  border-color: var(--success-color);
+}
+
+.form-group input:invalid:not(:placeholder-shown),
+.form-group textarea:invalid:not(:placeholder-shown) {
+  border-color: var(--color-error);
+}
+
+.form-group input:invalid:not(:placeholder-shown):focus,
+.form-group textarea:invalid:not(:placeholder-shown):focus {
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
 }
 
 .form-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: var(--spacing-md);
+}
+
+.form-error {
+  color: var(--color-error);
+  font-size: var(--font-size-small);
+  margin-top: var(--spacing-xs);
+}
+
+.form-help {
+  color: var(--muted-text);
+  font-size: var(--font-size-small);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.form-group input[type="submit"] {
+  background-color: var(--color-sky-blue);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  padding: var(--spacing-sm) var(--spacing-md);
+  transition: background-color var(--transition-fast);
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: var(--color-blue);
 }
