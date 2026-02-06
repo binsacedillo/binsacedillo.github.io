@@ -1,0 +1,116 @@
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile-section {
+  background: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--light-gray);
+}
+
+.section-header h2 {
+  margin: 0;
+  color: var(--color-jet-gray);
+}
+
+.profile-form {
+  margin-top: var(--spacing-lg);
+}
+
+.profile-form .form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.profile-form label {
+  display: block;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-size-base);
+}
+
+.profile-form input,
+.profile-form textarea {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--light-gray);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  transition: border-color var(--transition-base);
+}
+
+.profile-form input:focus,
+.profile-form textarea:focus {
+  outline: none;
+  border-color: var(--color-sky-blue);
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.15);
+}
+
+.profile-form input:disabled,
+.profile-form textarea:disabled {
+  background-color: var(--light-gray);
+  color: var(--disabled-text);
+  cursor: not-allowed;
+}
+
+.profile-form textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+.button-group {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.button-group button {
+  flex: 1;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-xl);
+}
+
+.message {
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-lg);
+  font-weight: 500;
+}
+
+.message.success {
+  background-color: var(--success-bg);
+  color: var(--success-color-dark);
+  border: 1px solid var(--success-border);
+}
+
+.message.error {
+  background-color: var(--danger-bg);
+  color: var(--danger-color-dark);
+  border: 1px solid var(--danger-border);
+}
+
+.success-message {
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-lg);
+  background-color: var(--success-bg);
+  color: var(--success-color-dark);
+  border: 1px solid var(--success-border);
+  font-weight: 500;
+}

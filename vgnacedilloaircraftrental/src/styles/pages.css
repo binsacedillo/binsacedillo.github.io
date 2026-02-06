@@ -1,0 +1,157 @@
+.catalog-page,
+.cart-page,
+.login-page,
+.signup-page,
+.profile-page,
+.payment-delivery-page,
+.confirmation-page,
+.about-page,
+.contact-page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-lg);
+}
+
+.cart-empty {
+  text-align: center;
+  padding: var(--spacing-xxl);
+  background: var(--white);
+  border-radius: var(--border-radius);
+}
+
+.login-form,
+.signup-form,
+.payment-form,
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.auth-link {
+  text-align: center;
+  margin-top: var(--spacing-lg);
+}
+
+.auth-link a {
+  color: var(--color-sky-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}
+
+.payment-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-lg);
+}
+
+.payment-form {
+  max-width: none;
+}
+
+.form-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.form-section h3 {
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--light-gray);
+}
+
+.profile-info {
+  background: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-lg);
+}
+
+.info-group {
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.info-group:last-child {
+  border-bottom: none;
+}
+
+.info-group label {
+  font-weight: 600;
+  color: var(--dark-gray);
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+.info-group p {
+  color: var(--color-jet-gray);
+  font-size: var(--font-size-large);
+}
+
+.confirmation-content {
+  text-align: center;
+  background: var(--white);
+  padding: var(--spacing-xxl);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.confirmation-content h1 {
+  color: var(--success-color);
+  font-size: var(--font-size-xxlarge);
+  margin-bottom: var(--spacing-lg);
+}
+
+.about-content,
+.contact-page {
+  background: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius);
+  margin-top: var(--spacing-lg);
+}
+
+.about-content ul {
+  margin-left: var(--spacing-xl);
+  margin-top: var(--spacing-md);
+}
+
+.about-content li {
+  margin-bottom: var(--spacing-sm);
+  color: var(--dark-gray);
+}
+
+.aircraft-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  background: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.details-image img {
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+
+.specifications {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  border-top: 2px solid var(--light-gray);
+}

@@ -1,0 +1,16 @@
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-description {
+  text-align: center;
+  color: var(--dark-gray);
+  font-size: var(--font-size-large);
+  margin-bottom: var(--spacing-xl);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--gray);
+}
