@@ -4,7 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aviation Rental Website</title>
-    <script type="module" crossorigin src="/assets/index-SGjcMfIa.js"></script>
+    <script>
+      (function () {
+        const { pathname, search, hash } = window.location;
+        if (search.startsWith('?/')) {
+          const decoded = search
+            .slice(2)
+            .replace(/~and~/g, '&');
+          window.history.replaceState(null, '', pathname + decoded + hash);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-CaZaASnY.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-C6uEmAg0.css">
   </head>
   <body>
