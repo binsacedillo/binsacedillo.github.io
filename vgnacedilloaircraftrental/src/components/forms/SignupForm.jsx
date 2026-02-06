@@ -14,7 +14,7 @@ const SignupForm = () => {
   });
   const [localError, setLocalError] = useState('');
   const [success, setSuccess] = useState('');
-  const { signup, loading, error: authError } = useAuth();
+  const { signup } = useAuth();
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -53,12 +53,10 @@ const SignupForm = () => {
     }
   };
 
-  const displayError = localError || authError;
-
   return (
     <form className="signup-form" onSubmit={handleSubmit}>
       <h2>Sign Up</h2>
-      {displayError && <div className="error-message" role="alert" aria-live="assertive">{displayError}</div>}
+      {localError && <div className="error-message" role="alert" aria-live="assertive">{localError}</div>}
       {success && <div className="success-message" role="status" aria-live="polite">{success}</div>}
       <div className="form-group">
         <label htmlFor="name">Name *</label>
@@ -69,7 +67,6 @@ const SignupForm = () => {
           value={formData.name}
           onChange={handleChange}
           placeholder="Enter your name"
-          disabled={loading}
           required
         />
       </div>
@@ -82,7 +79,6 @@ const SignupForm = () => {
           value={formData.email}
           onChange={handleChange}
           placeholder="Enter your email"
-          disabled={loading}
           required
           autoComplete="email"
         />
@@ -96,7 +92,6 @@ const SignupForm = () => {
           value={formData.phone}
           onChange={handleChange}
           placeholder="Enter your phone number (optional)"
-          disabled={loading}
           inputMode="tel"
           autoComplete="tel"
         />
@@ -110,7 +105,6 @@ const SignupForm = () => {
           value={formData.address}
           onChange={handleChange}
           placeholder="Enter your address (optional)"
-          disabled={loading}
         />
       </div>
       <div className="form-group">
@@ -122,7 +116,6 @@ const SignupForm = () => {
           value={formData.password}
           onChange={handleChange}
           placeholder="Enter your password (min 6 characters)"
-          disabled={loading}
           required
         />
       </div>
@@ -135,13 +128,10 @@ const SignupForm = () => {
           value={formData.confirmPassword}
           onChange={handleChange}
           placeholder="Confirm your password"
-          disabled={loading}
           required
         />
       </div>
-      <Button type="submit" disabled={loading}>
-        {loading ? 'Creating Account...' : 'Sign Up'}
-      </Button>
+      <Button type="submit">Sign Up</Button>
     </form>
   );
 };

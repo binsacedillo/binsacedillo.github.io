@@ -7,7 +7,7 @@ const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [localError, setLocalError] = useState('');
-  const { login, loading, error: authError } = useAuth();
+  const { login } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -27,12 +27,10 @@ const LoginForm = () => {
     }
   };
 
-  const displayError = localError || authError;
-
   return (
     <form className="login-form" onSubmit={handleSubmit}>
       <h2>Login</h2>
-      {displayError && <div className="error-message" role="alert" aria-live="assertive">{displayError}</div>}
+      {localError && <div className="error-message" role="alert" aria-live="assertive">{localError}</div>}
       <div className="form-group">
         <label htmlFor="email">Email</label>
         <input
@@ -41,7 +39,6 @@ const LoginForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
-          disabled={loading}
         />
       </div>
       <div className="form-group">
@@ -52,12 +49,9 @@ const LoginForm = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Enter your password"
-          disabled={loading}
         />
       </div>
-      <Button type="submit" disabled={loading}>
-        {loading ? 'Logging in...' : 'Login'}
-      </Button>
+      <Button type="submit">Login</Button>
     </form>
   );
 };
