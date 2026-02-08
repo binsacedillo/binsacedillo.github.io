@@ -21,32 +21,32 @@ const Header = () => {
           <svg className="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
           </svg>
-          <span className="logo-text">AirCraft Store</span>
+          <span className="logo-text">SkyHigh Rentals</span>
         </Link>
 
         {/* Navigation */}
         <nav className="nav">
           <div className="nav-links">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className={`nav-link ${isActivePath('/') ? 'active' : ''}`}
             >
               Home
             </Link>
-            <Link 
-              to="/catalog" 
+            <Link
+              to="/catalog"
               className={`nav-link ${isActivePath('/catalog') ? 'active' : ''}`}
             >
               Catalog
             </Link>
-            <Link 
-              to="/about" 
+            <Link
+              to="/about"
               className={`nav-link ${isActivePath('/about') ? 'active' : ''}`}
             >
               About
             </Link>
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className={`nav-link ${isActivePath('/contact') ? 'active' : ''}`}
             >
               Contact
@@ -54,8 +54,8 @@ const Header = () => {
           </div>
 
           <div className="nav-actions">
-            <Link 
-              to="/cart" 
+            <Link
+              to="/cart"
               className="cart-link"
             >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -69,8 +69,8 @@ const Header = () => {
 
             {isAuthenticated ? (
               <div className="user-menu">
-                <Link 
-                  to="/profile" 
+                <Link
+                  to="/profile"
                   className="user-link"
                 >
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -78,7 +78,7 @@ const Header = () => {
                   </svg>
                   <span>{user?.name || 'Profile'}</span>
                 </Link>
-                <button 
+                <button
                   onClick={logout}
                   className="logout-btn"
                 >
@@ -87,14 +87,14 @@ const Header = () => {
               </div>
             ) : (
               <div className="auth-links">
-                <Link 
-                  to="/login" 
+                <Link
+                  to="/login"
                   className="login-link"
                 >
                   Login
                 </Link>
-                <Link 
-                  to="/signup" 
+                <Link
+                  to="/signup"
                   className="signup-link"
                 >
                   Sign Up
