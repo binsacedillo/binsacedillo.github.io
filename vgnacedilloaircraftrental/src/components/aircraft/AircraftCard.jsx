@@ -18,7 +18,7 @@ const AircraftCard = ({ aircraft }) => {
       <p className="description">{aircraft.description}</p>
       <div className="card-actions">
         <Button variant="secondary" to={`/aircraft/${aircraft.id}`}>View Details</Button>
-        <Button onClick={handleAddToCart}>Add to Cart</Button>
+        <Button onClick={handleAddToCart}>Request Quote</Button>
       </div>
     </div>
   );

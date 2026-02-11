@@ -32,7 +32,7 @@ const AircraftDetails = () => {
             <p key={key}><strong>{key}:</strong> {value}</p>
           ))}
         </div>
-        <Button onClick={handleAddToCart}>Add to Cart</Button>
+        <Button onClick={handleAddToCart}>Request Quote</Button>
       </div>
     </div>
   );

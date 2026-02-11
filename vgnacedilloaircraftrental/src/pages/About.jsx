@@ -19,7 +19,7 @@ const About = () => {
         <ul>
           <li>Extensive selection of aircraft</li>
           <li>Expert guidance and support</li>
-          <li>Secure and transparent transactions</li>
+          <li>Secure transactions</li>
           <li>Competitive pricing</li>
         </ul>
       </section>
