@@ -15,7 +15,7 @@ const TransactionConfirmation = () => {
       setOrder(JSON.parse(lastOrder));
     }
     clearCart();
-  }, []);
+  }, [clearCart]);
 
   if (!order) {
     return (
