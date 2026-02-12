@@ -6,7 +6,7 @@ const About = () => {
       <h1>About Us</h1>
       <section className="about-content">
         <p>
-          Welcome to AirCraft Store, your premier destination for purchasing aircraft. 
+          Welcome to AirCraft Rental, your premier destination for purchasing aircraft. 
           With years of experience in the aviation industry, we pride ourselves on 
           offering a carefully curated selection of high-quality aircraft.
         </p>

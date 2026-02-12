@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import Button from '../common/Button';
+import { useCart } from '../../hooks/useCart';
 
 const PaymentForm = () => {
   const [formData, setFormData] = useState({
@@ -32,10 +34,31 @@ const PaymentForm = () => {
     }
   };
 
+  const { cartItems } = useCart();
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would process payment and upload receipt if needed
-    // For demo, just navigate to confirmation
+    // Save order details to localStorage for receipt
+    const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const tax = subtotal * 0.1;
+    const total = subtotal + tax;
+    const order = {
+      items: cartItems,
+      subtotal,
+      tax,
+      total,
+      payment: {
+        mode: formData.paymentMode,
+        ...(formData.paymentMode === 'credit' ? {
+          cardName: formData.cardName,
+          cardNumber: formData.cardNumber,
+        } : {}),
+        address: formData.address,
+        city: formData.city,
+        zipCode: formData.zipCode
+      },
+      date: new Date().toISOString()
+    };
+    localStorage.setItem('lastOrder', JSON.stringify(order));
     navigate('/transaction-confirmation');
   };
 

@@ -10,8 +10,8 @@ const Home = () => {
   return (
     <div className="home">
       <section className="hero">
-        <h1>Welcome to AirCraft Store</h1>
-        <p>Discover the finest collection of aircraft for sale</p>
+        <h1>Welcome to AirCraft Rental</h1>
+        <p>Discover the finest collection of aircraft for rental</p>
       </section>
       
       <section className="featured-aircraft">

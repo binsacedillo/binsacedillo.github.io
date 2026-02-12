@@ -8,7 +8,6 @@ const PaymentDelivery = () => {
       <h1>Payment & Delivery</h1>
       <div className="payment-layout">
         <PaymentForm />
-        <CartSummary />
       </div>
     </div>
   );
