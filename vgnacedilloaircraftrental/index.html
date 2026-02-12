@@ -1,28 +1,23 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aircraft Store Website</title>
-    <script>
-      (function () {
-        const { pathname, search, hash } = window.location;
-        if (search.startsWith('?/')) {
-          const decoded = search
-            .slice(2)
-            .replace(/~and~/g, '&');
-          window.history.replaceState(null, '', pathname + decoded + hash);
-        }
-      })();
-    </script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Aircraft Store Website</title>
+		<script>
+			(function () {
+				const { pathname, search, hash } = window.location;
+				if (search.startsWith("?/")) {
+					const decoded = search.slice(2).replace(/~and~/g, "&");
+					window.history.replaceState(null, "", pathname + decoded + hash);
+				}
+			})();
+		</script>
 
-
-
-    <script type="module" crossorigin src="/vgnacedilloaircraftrental/assets/index-DCUzmmPD.js"></script>
-    <link rel="stylesheet" crossorigin href="/vgnacedilloaircraftrental/assets/index-BYE3gKlX.css">
-  </head>
-  <body>
-    <div id="root"></div>
-
-  </body>
+		<script type="module" crossorigin src="/vgnacedilloaircraftrental/assets/index-DGjAR13n.js"></script>
+		<link rel="stylesheet" crossorigin href="/vgnacedilloaircraftrental/assets/index-BYE3gKlX.css">
+	</head>
+	<body>
+		<div id="root"></div>
+	</body>
 </html>

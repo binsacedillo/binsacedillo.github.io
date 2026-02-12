@@ -10,20 +10,32 @@ const PaymentForm = () => {
     cvv: '',
     address: '',
     city: '',
-    zipCode: ''
+    zipCode: '',
+    paymentMode: 'credit',
+    receipt: null
   });
   const navigate = useNavigate();
 
+
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    const { name, value, type, files } = e.target;
+    if (type === 'file') {
+      setFormData({
+        ...formData,
+        [name]: files[0]
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value
+      });
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Process payment
+    // Here you would process payment and upload receipt if needed
+    // For demo, just navigate to confirmation
     navigate('/transaction-confirmation');
   };
 
@@ -32,65 +44,97 @@ const PaymentForm = () => {
       <div className="form-section">
         <h3>Payment Information</h3>
         <div className="form-group">
-          <label htmlFor="cardNumber">Card Number</label>
-          <input
-            type="text"
-            id="cardNumber"
-            name="cardNumber"
-            value={formData.cardNumber}
+          <label htmlFor="paymentMode">Mode of Payment</label>
+          <select
+            id="paymentMode"
+            name="paymentMode"
+            value={formData.paymentMode}
             onChange={handleChange}
-            placeholder="1234 5678 9012 3456"
             required
-            autoComplete="cc-number"
-            inputMode="numeric"
-            pattern="[0-9\\s]{13,23}"
-          />
+          >
+            <option value="credit">Credit/Debit Card</option>
+            <option value="gcash">GCash</option>
+            <option value="paypal">PayPal</option>
+            <option value="bank">Bank Transfer</option>
+          </select>
         </div>
-        <div className="form-group">
-          <label htmlFor="cardName">Cardholder Name</label>
-          <input
-            type="text"
-            id="cardName"
-            name="cardName"
-            value={formData.cardName}
-            onChange={handleChange}
-            placeholder="John Doe"
-            required
-            autoComplete="cc-name"
-          />
-        </div>
-        <div className="form-row">
+        {formData.paymentMode === 'credit' && (
+          <>
+            <div className="form-group">
+              <label htmlFor="cardNumber">Card Number</label>
+              <input
+                type="text"
+                id="cardNumber"
+                name="cardNumber"
+                value={formData.cardNumber}
+                onChange={handleChange}
+                placeholder="1234 5678 9012 3456"
+                required
+                autoComplete="cc-number"
+                inputMode="numeric"
+                pattern="[0-9\\s]{13,23}"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="cardName">Cardholder Name</label>
+              <input
+                type="text"
+                id="cardName"
+                name="cardName"
+                value={formData.cardName}
+                onChange={handleChange}
+                placeholder="John Doe"
+                required
+                autoComplete="cc-name"
+              />
+            </div>
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="expiryDate">Expiry Date</label>
+                <input
+                  type="text"
+                  id="expiryDate"
+                  name="expiryDate"
+                  value={formData.expiryDate}
+                  onChange={handleChange}
+                  placeholder="MM/YY"
+                  required
+                  autoComplete="cc-exp"
+                  inputMode="numeric"
+                  pattern="\\d{2}/\\d{2}"
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="cvv">CVV</label>
+                <input
+                  type="text"
+                  id="cvv"
+                  name="cvv"
+                  value={formData.cvv}
+                  onChange={handleChange}
+                  placeholder="123"
+                  required
+                  autoComplete="cc-csc"
+                  inputMode="numeric"
+                  pattern="[0-9]{3,4}"
+                />
+              </div>
+            </div>
+          </>
+        )}
+        {(formData.paymentMode === 'gcash' || formData.paymentMode === 'bank') && (
           <div className="form-group">
-            <label htmlFor="expiryDate">Expiry Date</label>
+            <label htmlFor="receipt">Upload Receipt (screenshot or PDF)</label>
             <input
-              type="text"
-              id="expiryDate"
-              name="expiryDate"
-              value={formData.expiryDate}
+              type="file"
+              id="receipt"
+              name="receipt"
+              accept="image/*,application/pdf"
               onChange={handleChange}
-              placeholder="MM/YY"
               required
-              autoComplete="cc-exp"
-              inputMode="numeric"
-              pattern="\\d{2}/\\d{2}"
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="cvv">CVV</label>
-            <input
-              type="text"
-              id="cvv"
-              name="cvv"
-              value={formData.cvv}
-              onChange={handleChange}
-              placeholder="123"
-              required
-              autoComplete="cc-csc"
-              inputMode="numeric"
-              pattern="[0-9]{3,4}"
-            />
-          </div>
-        </div>
+        )}
       </div>
 
       <div className="form-section">
