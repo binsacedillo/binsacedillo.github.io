@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Button from '../components/common/Button';
 import { getFromLocalStorage, saveToLocalStorage } from '../utils/localStorage';
 
@@ -9,13 +9,7 @@ const Contact = () => {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
-  const [messages, setMessages] = useState([]);
-
-  // Load messages from localStorage on mount
-  useEffect(() => {
-    const savedMessages = getFromLocalStorage('contactMessages') || [];
-    setMessages(savedMessages);
-  }, []);
+  const [messages, setMessages] = useState(() => getFromLocalStorage('contactMessages') || []);
 
   const handleChange = (e) => {
     setFormData({
