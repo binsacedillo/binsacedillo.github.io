@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Button from '../components/common/Button';
 import AircraftCard from '../components/aircraft/AircraftCard';
 import { aircraftData } from '../data/aircraftData';
 

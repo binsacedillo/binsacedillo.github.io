@@ -1,21 +1,27 @@
-
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '../components/common/Button';
 import { useCart } from '../hooks/useCart';
 
 const TransactionConfirmation = () => {
+  const navigate = useNavigate();
   const { clearCart } = useCart();
-  const [order, setOrder] = React.useState(null);
-
-  React.useEffect(() => {
-    // Get order details from localStorage
+  const [order] = useState(() => {
     const lastOrder = localStorage.getItem('lastOrder');
     if (lastOrder) {
-      setOrder(JSON.parse(lastOrder));
+      try {
+        return JSON.parse(lastOrder);
+      } catch (error) {
+        console.error('Failed to load order details:', error);
+      }
     }
+    return null;
+  });
+
+  useEffect(() => {
     clearCart();
-  }, [clearCart]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   if (!order) {
     return (
@@ -24,9 +30,7 @@ const TransactionConfirmation = () => {
           <h1>✓ Order Confirmed!</h1>
           <p>Thank you for your purchase. Your order has been successfully processed.</p>
           <p>You will receive an email confirmation shortly.</p>
-          <Link to="/">
-            <Button>Return to Home</Button>
-          </Link>
+          <Button onClick={() => navigate('/')}>Return to Home</Button>
         </div>
       </div>
     );
@@ -59,9 +63,7 @@ const TransactionConfirmation = () => {
             <div><strong>Address:</strong> {order.payment.address}, {order.payment.city}, {order.payment.zipCode}</div>
           </div>
         </div>
-        <Link to="/">
-          <Button>Return to Home</Button>
-        </Link>
+        <Button onClick={() => navigate('/')}>Return to Home</Button>
       </div>
     </div>
   );
