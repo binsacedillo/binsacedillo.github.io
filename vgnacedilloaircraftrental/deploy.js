@@ -22,11 +22,11 @@ try {
   console.log('✅ Files copied successfully');
 
   console.log('Committing and pushing to main...');
-  
+  // Accept commit message as argument
+  const commitMessage = process.argv[2] || 'Build: Deploy React app to vgnacedilloaircraftrental';
   execSync('git add -A', { stdio: 'inherit' });
-  execSync('git commit -m "Build: Deploy React app to vgnacedilloaircraftrental"', { stdio: 'inherit' });
+  execSync(`git commit -m "${commitMessage}"`, { stdio: 'inherit' });
   execSync('git push origin main', { stdio: 'inherit' });
-  
   console.log('✅ Successfully deployed to main branch');
   console.log('Now go to GitHub repo settings > Pages and set source to main branch / root folder');
 } catch (err) {
