@@ -7,7 +7,7 @@ Personal portfolio and coursework repository for FEU TECH Advanced Web Design.
 ### VGN Acedillo Aircraft Rental
 A modern aircraft rental web application showcasing progressive development:
 - **activity011226/** – Initial implementation using HTML, CSS, and vanilla JavaScript
-- **vgnacedilloaircraftrental/** – Enhanced React + Vite version featuring:
+- **vgnaaircraftrental/** – Enhanced React + Vite version featuring:
 	- Responsive design
 	- Shopping cart functionality
 	- User authentication
@@ -26,7 +26,7 @@ A modern aircraft rental web application showcasing progressive development:
 - GitHub Pages (deployment)
 
 ## 📦 Deployment
-The main application (vgnacedilloaircraftrental) is deployed via GitHub Pages.
+The main application (vgnaaircraftrental) is deployed via GitHub Pages.
 
 ## 📝 License
 © 2026 - Academic coursework for FEU TECH

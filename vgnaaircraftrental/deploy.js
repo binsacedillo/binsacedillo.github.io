@@ -9,9 +9,9 @@ try {
   const distPath = path.join(__dirname, 'dist');
   const outputPath = path.join(__dirname);
 
-  console.log('Copying dist files to vgnacedilloaircraftrental folder...');
+  console.log('Copying dist files to vgnaaircraftrental folder...');
   
-  // Copy dist contents to the vgnacedilloaircraftrental folder
+  // Copy dist contents to the vgnaaircraftrental folder
   const distFiles = fs.readdirSync(distPath);
   distFiles.forEach(file => {
     const srcPath = path.join(distPath, file);
@@ -23,7 +23,7 @@ try {
 
   console.log('Committing and pushing to main...');
   // Accept commit message as argument
-  const commitMessage = process.argv[2] || 'Build: Deploy React app to vgnacedilloaircraftrental';
+  const commitMessage = process.argv[2] || 'Build: Deploy React app to vgnaaircraftrental';
   execSync('git add -A', { stdio: 'inherit' });
   execSync(`git commit -m "${commitMessage}"`, { stdio: 'inherit' });
   execSync('git push origin main', { stdio: 'inherit' });
